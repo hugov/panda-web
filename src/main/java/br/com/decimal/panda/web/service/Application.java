@@ -11,12 +11,12 @@ import br.com.decimal.panda.web.entity.Usuario;
 @ComponentScan
 public class Application {
 
+	private static ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
+
 	public static void main(String[] args) {
-		ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
-		
+
 		UsuarioService service = context.getBean(UsuarioService.class);
 		service.save(new Usuario());
-		
-	}
 
+	}
 }

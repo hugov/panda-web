@@ -6,14 +6,14 @@ import br.com.decimal.panda.web.entity.Aluno;
 
 public interface AlunoMapper {
 
-	void inserir(Aluno aluno);
+	public Aluno consultar(Long id);
 	
-	void alterar(Aluno aluno);
+	public List<Aluno> listar();
 	
-	void remover(Long id);
+	public void inserir(Aluno aluno);
 	
-	Aluno consultar(Long id);
+	public void alterar(Aluno aluno);
 	
-	List<Aluno> listar();
+	public void remover(Long id);
 
 }

@@ -1,7 +1,17 @@
 package br.com.decimal.panda.web.service;
 
-public interface CrudService<ID, ENTITY> {
+import java.util.List;
+
+public interface CrudService<ID, ENTIDADE> {
 	
-	void save(ENTITY entity);
+	public ENTIDADE consultar(ID id);
+	
+	public List<ENTIDADE> listar();
+	
+	public void inserir(ENTIDADE entidade);
+	
+	public void alterar(ENTIDADE entidade);
+	
+	public void remover(ID id);
 
 }

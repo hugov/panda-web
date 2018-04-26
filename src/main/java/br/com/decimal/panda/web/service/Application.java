@@ -16,7 +16,7 @@ public class Application {
 	public static void main(String[] args) {
 
 		UsuarioService service = context.getBean(UsuarioService.class);
-		service.save(new Usuario());
+		service.inserir(new Usuario());
 
 	}
 }

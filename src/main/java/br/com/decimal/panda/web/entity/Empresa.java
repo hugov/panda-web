@@ -9,6 +9,7 @@ public class Empresa implements Serializable {
 	private Long id;
 	private String razaoSocial;
 	private String cpfCnpj;
+	private InstituicaoEnsino instituicaoEnsino;
 	private Long situacao;
 
 	public Long getId() {
@@ -33,6 +34,14 @@ public class Empresa implements Serializable {
 
 	public void setCpfCnpj(String cpfCnpj) {
 		this.cpfCnpj = cpfCnpj;
+	}
+
+	public InstituicaoEnsino getInstituicaoEnsino() {
+		return instituicaoEnsino;
+	}
+
+	public void setInstituicaoEnsino(InstituicaoEnsino instituicaoEnsino) {
+		this.instituicaoEnsino = instituicaoEnsino;
 	}
 
 	public Long getSituacao() {

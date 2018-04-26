@@ -1,10 +1,13 @@
 package br.com.decimal.panda.web.entity;
 
-public class Conta {
+import java.io.Serializable;
 
+public class Conta implements Serializable {
+
+	private static final long serialVersionUID = -2964832522476177911L;
+	
 	private Long id;
 	private Empresa empresa;
-	private InstituicaoEnsino instituicaoEnsino;
 	private Long situacao;
 
 	public Long getId() {
@@ -21,14 +24,6 @@ public class Conta {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
-	}
-
-	public InstituicaoEnsino getInstituicaoEnsino() {
-		return instituicaoEnsino;
-	}
-
-	public void setInstituicaoEnsino(InstituicaoEnsino instituicaoEnsino) {
-		this.instituicaoEnsino = instituicaoEnsino;
 	}
 
 	public Long getSituacao() {

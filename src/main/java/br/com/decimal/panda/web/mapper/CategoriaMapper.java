@@ -6,14 +6,14 @@ import br.com.decimal.panda.web.entity.Categoria;
 
 public interface CategoriaMapper {
 
-	void inserir(Categoria categoria);
+	public Categoria consultar(Long id);
 	
-	void alterar(Categoria categoria);
+	public List<Categoria> listar();
 	
-	void remover(Long id);
+	public void inserir(Categoria categoria);
 	
-	Categoria consultar(Long id);
+	public void alterar(Categoria categoria);
 	
-	List<Categoria> listar();
+	public void remover(Long id);
 
 }

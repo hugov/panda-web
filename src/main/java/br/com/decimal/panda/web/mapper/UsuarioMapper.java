@@ -4,6 +4,6 @@ import br.com.decimal.panda.web.entity.Usuario;
 
 public interface UsuarioMapper {
 
-	void insertUsuario(Usuario usuario);
+	void inserir(Usuario usuario);
 
 }

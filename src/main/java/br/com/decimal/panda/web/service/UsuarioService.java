@@ -15,7 +15,7 @@ public class UsuarioService implements CrudService<Long, Usuario> {
 	
 	@Transactional
 	public void save(Usuario entity) {
-		usuarioMapper.insertUsuario(entity);
+		usuarioMapper.inserir(entity);
 	}
 
 }

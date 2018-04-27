@@ -2,8 +2,11 @@ package br.com.decimal.panda.web.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import br.com.decimal.panda.web.entity.Categoria;
 
+@Component
 public interface CategoriaMapper {
 
 	public Categoria consultar(Long id);

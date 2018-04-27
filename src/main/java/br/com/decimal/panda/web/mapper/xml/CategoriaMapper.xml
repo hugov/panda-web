@@ -14,12 +14,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="br.com.decimal.ultracob.mapper.UsuarioMapper">
+<mapper namespace="br.com.decimal.panda.web.mapper.CategoriaMapper">
 
-  <cache />
+  	<cache />
   
-  <insert id="insertUsuario" parameterType="">
-  	INSERT INTO USUARIO (ID) VALUES ()
-  </insert>
+  	<select id="consultar" parameterType="Long">
+  		SELECT ID, DESCRICAO, SITUACAO FROM CATEGORIA WHERE ID = #{id}
+  	</select>
+  
+  	<select id="listar">
+  		SELECT ID, DESCRICAO, SITUACAO FROM CATEGORIA
+  	</select>
 
+	<insert id="inserir" parameterType="br.com.decimal.panda.web.entity.Categoria">
+  		INSERT INTO CATEGORIA (DESCRICAO, SITUACAO) VALUES (#{descricao}, #{situacao})
+  	</insert>
+  	
+  	<update id="alterar" parameterType="br.com.decimal.panda.web.entity.Categoria">
+  		UPDATE CATEGORIA SET DESCRICAO = #{descricao}, SITUACAO = #{situacao} WHERE ID = #{id}
+  	</update>
+	
+	<delete id="remover" parameterType="Long">
+  		DELETE FROM CATEGORIA WHERE ID = #{id}
+  	</delete>
+  	
 </mapper>
